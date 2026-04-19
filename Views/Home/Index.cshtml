@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-5 text-center">
+    <h1 class="display-4">Welcome to Audio-Log</h1>
+    <p class="lead mt-3">The listener's Dashboard. Track your progress and analyze your trends.</p>
+    
+    <div class="row mt-5">
+        <div class="col-md-3 mt-2">
+            <a asp-controller="Review" asp-action="Create" class="btn btn-success w-100 py-3">Log a Review</a>
+        </div>
+        <div class="col-md-3 mt-2">
+            <a asp-controller="Review" asp-action="Read" class="btn btn-info w-100 py-3 text-white">Library View</a>
+        </div>
+        <div class="col-md-3 mt-2">
+            <a asp-controller="Review" asp-action="Update" class="btn btn-warning w-100 py-3 text-dark">Edit Review</a>
+        </div>
+        <div class="col-md-3 mt-2">
+            <a asp-controller="Review" asp-action="Delete" class="btn btn-danger w-100 py-3">Remove Entry</a>
+        </div>
+    </div>
+</div>

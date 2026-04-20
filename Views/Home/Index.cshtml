@@ -3,21 +3,71 @@
 }
 
 <div class="container mt-5 text-center">
-    <h1 class="display-4">Welcome to Audio-Log</h1>
-    <p class="lead mt-3">The listener's Dashboard. Track your progress and analyze your trends.</p>
+    <h1 class="display-4 text-info fw-bold">Welcome to Audio-Log</h1>
+    <p class="lead mt-2">The listener's Dashboard. Track your music and analyze your trends.</p>
     
-    <div class="row mt-5">
-        <div class="col-md-3 mt-2">
-            <a asp-controller="Review" asp-action="Create" class="btn btn-success w-100 py-3">Log a Review</a>
-        </div>
-        <div class="col-md-3 mt-2">
-            <a asp-controller="Review" asp-action="Read" class="btn btn-info w-100 py-3 text-white">Library View</a>
-        </div>
-        <div class="col-md-3 mt-2">
-            <a asp-controller="Review" asp-action="Update" class="btn btn-warning w-100 py-3 text-dark">Edit Review</a>
-        </div>
-        <div class="col-md-3 mt-2">
-            <a asp-controller="Review" asp-action="Delete" class="btn btn-danger w-100 py-3">Remove Entry</a>
+    <div class="row mt-5 text-start justify-content-center">
+        <div class="col-md-10">
+            <div class="card bg-secondary text-light shadow">
+                <div class="card-body p-4">
+                    <h3 class="card-title text-info border-bottom border-info pb-2 mb-3">Project Overview</h3>
+                    <p class="card-text fs-5">
+                        <strong>The Idea:</strong> Audio-Log is a central tracking dashboard designed for music listeners.
+                    </p>
+                    <p class="card-text fs-5">
+                        <strong>The Purpose:</strong> Provide listeners with data-driven insights into their listening habits and tastes.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="row mt-5 text-start justify-content-center">
+        <div class="col-md-10">
+            <h3 class="text-info mb-3">Key Features</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-dark border-secondary h-100">
+                        <div class="card-body text-light">
+                            <h5 class="card-title text-warning">Media Management</h5>
+                            <p class="card-text">Seamlessly log new reviews, view your historical library, update ratings, and manage your entries.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-dark border-secondary h-100">
+                        <div class="card-body text-light">
+                            <h5 class="card-title text-success">Advanced Analytics</h5>
+                            <p class="card-text">Real-time visualizations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-dark border-secondary h-100">
+                        <div class="card-body text-light">
+                            <h5 class="card-title text-primary">AI Discovery</h5>
+                            <p class="card-text">Botpress AI assistant that recommends new music.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 pt-4 border-top border-secondary justify-content-center">
+        <h4 class="mb-4">Manage Your Log</h4>
+        <div class="col-md-3 mt-2">
+            <a asp-controller="Review" asp-action="Create" class="btn btn-success w-100 py-3 shadow">Log a Review</a>
+        </div>
+        <div class="col-md-3 mt-2">
+            <a asp-controller="Review" asp-action="Read" class="btn btn-info w-100 py-3 text-white shadow">Library View</a>
+        </div>
+        <div class="col-md-3 mt-2">
+            <a asp-controller="Review" asp-action="Update" class="btn btn-warning w-100 py-3 text-dark shadow">Edit Review</a>
+        </div>
+        <div class="col-md-3 mt-2">
+            <a asp-controller="Review" asp-action="Delete" class="btn btn-danger w-100 py-3 shadow">Remove Entry</a>
+        </div>
+    </div>
+
 </div>

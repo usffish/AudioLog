@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Edit Review";
+}
+
+<div class="container mt-5">
+    <h2 class="text-warning border-bottom border-warning pb-2">Edit Review (Update)</h2>
+    <p class="lead mt-3">This page simulates the <strong>Update</strong> function. Users select an existing record, which pre-fills the form below, allowing them to modify the data and send an SQL UPDATE command to the server.</p>
+    
+    <div class="card bg-secondary text-light mt-4 shadow">
+        <div class="card-body p-4">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Editing Album</label>
+                    <input type="text" class="form-control bg-dark text-secondary border-secondary" value="Currents - Tame Impala" readonly>
+                    <div class="form-text text-light opacity-75">You are currently modifying this record.</div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Update Your Rating</label>
+                    <select class="form-select bg-dark text-light border-secondary">
+                        <option value="5">5 Stars - Masterpiece</option>
+                        <option value="4" selected>4 Stars - Great (Current)</option>
+                        <option value="3">3 Stars - Good</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Update Review Notes</label>
+                    <textarea class="form-control bg-dark text-light border-secondary" rows="3">The basslines on this album are incredible.</textarea>
+                </div>
+                <button type="button" class="btn btn-warning text-dark mt-3 fw-bold">Save Changes</button>
+            </form>
+        </div>
+    </div>
+</div>

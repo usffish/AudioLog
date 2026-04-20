@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Delete Entry";
+}
+
+<div class="container mt-5">
+    <h2 class="text-danger border-bottom border-danger pb-2">Remove Entry (Delete)</h2>
+    <p class="lead mt-3">This page outlines the <strong>Delete</strong> mechanism. Because deletion is destructive, the application will always require the user to confirm their choice before permanently dropping the record from the database.</p>
+
+    <div class="card border-danger bg-dark text-light mt-5 shadow">
+        <div class="card-header bg-danger text-white fw-bold">
+            ⚠️ Deletion Confirmation Required
+        </div>
+        <div class="card-body p-4 text-center">
+            <h4 class="card-title">Are you sure you want to delete this record?</h4>
+            <p class="card-text mt-3 fs-5">
+                <strong>Album:</strong> To Pimp a Butterfly<br>
+                <strong>Artist:</strong> Kendrick Lamar
+            </p>
+            <div class="mt-4">
+                <button class="btn btn-danger px-4 me-3">Yes, Delete Record</button>
+                <a asp-controller="Review" asp-action="Read" class="btn btn-secondary px-4">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>

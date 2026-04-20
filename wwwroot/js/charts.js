@@ -1,6 +1,37 @@
 // Ensure the DOM is fully loaded before rendering charts
 document.addEventListener('DOMContentLoaded', function () {
 
+    // Global Dark Mode Styling for Chart.js
+    const darkThemeOptions = {
+        responsive: true,
+        plugins: {
+            legend: {
+                labels: {
+                    color: '#f8f9fa' // Light gray/white text for legends
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                grid: {
+                    color: 'rgba(255, 255, 255, 0.1)' // Faint white lines
+                },
+                ticks: {
+                    color: '#f8f9fa' // Bright white labels for Y-axis
+                }
+            },
+            x: {
+                grid: {
+                    display: false // Hide X-axis grid lines for a cleaner look
+                },
+                ticks: {
+                    color: '#f8f9fa' // Bright white labels for X-axis
+                }
+            }
+        }
+    };
+
     // 1. Bar Chart: Ratings Distribution
     const ctxRating = document.getElementById('ratingChart').getContext('2d');
     new Chart(ctxRating, {
@@ -10,16 +41,12 @@ document.addEventListener('DOMContentLoaded', function () {
             datasets: [{
                 label: 'Number of Albums',
                 data: [5, 12, 45, 68, 22],
-                backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                backgroundColor: 'rgba(54, 162, 235, 0.7)',
                 borderColor: 'rgba(54, 162, 235, 1)',
                 borderWidth: 1
             }]
         },
-        options: {
-            responsive: true,
-            scales: { y: { beginAtZero: true } },
-            plugins: { legend: { display: false } }
-        }
+        options: darkThemeOptions // Applies our readability fixes
     });
 
     // 2. Doughnut Chart: Release Era Breakdown
@@ -31,18 +58,23 @@ document.addEventListener('DOMContentLoaded', function () {
             datasets: [{
                 data: [15, 25, 40, 30, 42],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.6)',
-                    'rgba(255, 159, 64, 0.6)',
-                    'rgba(255, 205, 86, 0.6)',
-                    'rgba(75, 192, 192, 0.6)',
-                    'rgba(153, 102, 255, 0.6)'
+                    'rgba(255, 99, 132, 0.7)',
+                    'rgba(255, 159, 64, 0.7)',
+                    'rgba(255, 205, 86, 0.7)',
+                    'rgba(75, 192, 192, 0.7)',
+                    'rgba(153, 102, 255, 0.7)'
                 ],
                 borderWidth: 1
             }]
         },
         options: {
             responsive: true,
-            plugins: { legend: { position: 'right', labels: { color: 'white' } } }
+            plugins: {
+                legend: {
+                    position: 'right',
+                    labels: { color: '#f8f9fa' }
+                }
+            }
         }
     });
 
@@ -62,13 +94,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 borderWidth: 2
             }]
         },
-        options: {
-            responsive: true,
-            scales: {
-                y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.1)' } },
-                x: { grid: { color: 'rgba(255,255,255,0.1)' } }
-            },
-            plugins: { legend: { labels: { color: 'white' } } }
-        }
+        options: darkThemeOptions // Applies our readability fixes
     });
 });

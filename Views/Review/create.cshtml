@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Log a Review";
+}
+
+<div class="container mt-5">
+    <h2 class="text-success border-bottom border-success pb-2">Log a New Review (Create)</h2>
+    <p class="lead mt-3">This page demonstrates how the <strong>Create</strong> function will work in the final project. Users will fill out this form to insert a new album record into the database.</p>
+    
+    <div class="card bg-secondary text-light mt-4 shadow">
+        <div class="card-body p-4">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Album Title</label>
+                    <input type="text" class="form-control bg-dark text-light border-secondary" placeholder="e.g., Dark Side of the Moon">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Artist</label>
+                    <input type="text" class="form-control bg-dark text-light border-secondary" placeholder="e.g., Pink Floyd">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Your Rating</label>
+                    <select class="form-select bg-dark text-light border-secondary">
+                        <option selected>Choose a rating...</option>
+                        <option value="5">5 Stars - Masterpiece</option>
+                        <option value="4">4 Stars - Great</option>
+                        <option value="3">3 Stars - Good</option>
+                        <option value="2">2 Stars - Mediocre</option>
+                        <option value="1">1 Star - Poor</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-success mt-3">Submit Review to Database</button>
+            </form>
+        </div>
+    </div>
+</div>

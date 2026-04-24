@@ -2,9 +2,11 @@
 
 A full-stack web application for logging and reviewing audio content, built with **ASP.NET Core MVC** on **.NET 10**.
 
+> **Live Demo:** View a static version at [http://myweb.usf.edu/~ismailj/index.html](http://myweb.usf.edu/~ismailj/index.html)
+
 ## Overview
 
-AudioLog provides a clean interface for tracking and managing audio reviews. The app follows the MVC pattern with a dedicated `ReviewController` exposing full CRUD operations — Create, Read, Update, and Delete — for audio log entries.
+AudioLog provides a clean interface for tracking and managing audio reviews. The app follows the MVC pattern with a dedicated ReviewController exposing full CRUD operations — Create, Read, Update, and Delete — for audio log entries.
 
 ## Tech Stack
 
